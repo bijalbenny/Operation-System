@@ -28,7 +28,7 @@ void consumer() {
     mutex = signal(mutex);
 }
 
-int main() {
+void main() {
     int choice;
     while(true) {
         printf("Enter choice :\n 1.Producer\t 2.Consumer\t 3.Exit\n");
@@ -54,5 +54,4 @@ int main() {
                 printf("Invalid choice\n");
         }
     }
-    return 0;
 }
