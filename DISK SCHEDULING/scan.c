@@ -35,8 +35,9 @@ int main() {
             }
         }
     }
+
     // Calculating seek time
-    for(int i = 0; i <= n; i++) {
+    for(int i = 0; i < n; i++) {  // Change the loop condition to iterate up to n - 1
         difference = absoluteValue(queue[i + 1] - queue[i]);
         seek += difference;
         printf("Disk head moves from position %d to %d with Seek %d\n", queue[i], queue[i + 1], difference);
