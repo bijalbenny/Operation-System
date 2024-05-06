@@ -88,9 +88,10 @@ for(i=0;i<limit;i++){
      }
    }
   }
- */
+ 
 for(i=0;i<limit;i++){
   if(p[i].flag==0)
    printf("There is no space for %d process\n",p[i].psize);
 }
 }
+*/
