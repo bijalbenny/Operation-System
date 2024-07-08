@@ -35,7 +35,7 @@ void main()
                     minIndex=j-1;
                     break;
                   }
-                 else if(freq[j]<minFreq||(freq[j]==minFreq&&time[j]<oldest){
+                 else if(freq[j]<minFreq||(freq[j]==minFreq&&time[j]<oldest)){
                     minFreq=freq[j];
                     minIndex=j;
                     oldest=time[j];
