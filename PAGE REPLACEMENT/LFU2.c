@@ -6,10 +6,11 @@ void main()
     scanf("%d",&fNo);
     printf("Enter no of requests\n");
     scanf("%d",&rNo);
-    int frame[fNo],req[rNo],freq[fNo];
+    int frame[fNo],req[rNo],freq[fNo],time[fNo];
     for(i=0;i<fNo;i++){
         frame[i]=-1;
         freq[i]=0;
+        time[i]=0;
     }
     printf("Enter requests\n");
     for(i=0;i<rNo;i++)
@@ -23,19 +24,26 @@ void main()
             if(frame[j]==req[i]){
                 hit=1;
                 freq[j]++;
+                time[j]=i;
                 break;
             }
         }
         if(hit==0){
-            int minFreq=freq[0],minIndex=0;
+            int minFreq=freq[0],minIndex=0,oldest=time[0];
             for(j=1;j<fNo;j++){
-                if(freq[j]<minFreq){
+                if(frame[j]==-1){
+                    minIndex=j;
+                    break;
+                  }
+                 else if(freq[j]<minFreq||(freq[j]==minFreq&&time[j]<oldest){
                     minFreq=freq[j];
                     minIndex=j;
+                    oldest=time[j];
                 }
             }
             frame[minIndex]=req[i];
             freq[minIndex]=1;
+            time[minIndex]=i;
             pgf++;
         }
         for(j=0;j<fNo;j++)
