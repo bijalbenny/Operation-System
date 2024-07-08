@@ -31,8 +31,8 @@ void main()
         if(hit==0){
             int minFreq=freq[0],minIndex=0,oldest=time[0];
             for(j=1;j<fNo;j++){
-                if(frame[j]==-1){
-                    minIndex=j;
+                if(frame[j-1]==-1){
+                    minIndex=j-1;
                     break;
                   }
                  else if(freq[j]<minFreq||(freq[j]==minFreq&&time[j]<oldest){
